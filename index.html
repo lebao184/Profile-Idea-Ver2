@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e8e8e8">
+  <meta name="description" content="Một góc nhỏ trên internet — profile của Shyred.">
+  <title>Shyred — Personal space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Styles.css">
+  <script src="Scripts.js" defer></script>
+</head>
+<body>
+  <div class="backdrop" id="backdrop" aria-hidden="true"><video class="backdrop-video" id="backdropVideo" autoplay muted loop playsinline></video></div>
+  <nav class="social-rail" aria-label="Liên kết mạng xã hội">
+    <a class="rail-icon search-trigger" href="#gallery" aria-label="Tìm trong bộ sưu tập" title="Tìm kiếm"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="13" cy="13" r="8.5"/><path d="m19.5 19.5 8 8"/></svg></a>
+    <a class="rail-icon tiktok" href="https://www.tiktok.com/@shyred184" aria-label="TikTok" target="_blank" rel="noreferrer"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M18 4v15.2a5.2 5.2 0 1 1-4.4-5.1v4.5a1.7 1.7 0 1 0 .9 1.5V4h3.5c.3 3.1 2 5 5 5.5v3.7A10.5 10.5 0 0 1 18 11V4Z"/></svg></a>
+    <a class="rail-icon" href="https://www.youtube.com/@BaoLe-ltb184" aria-label="YouTube" target="_blank" rel="noreferrer"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3.5" y="7" width="25" height="18" rx="5"/><path class="filled" d="m13 11 8 5-8 5z"/></svg></a>
+    <a class="rail-icon" href="https://www.facebook.com/shyred184" aria-label="Facebook" target="_blank" rel="noreferrer"><svg viewBox="0 0 32 32" aria-hidden="true"><path class="filled" d="M18.2 29V17.5H22l.6-4.5h-4.4v-2.9c0-1.3.4-2.2 2.2-2.2h2.3v-4a30 30 0 0 0-3.4-.2c-3.4 0-5.7 2.1-5.7 5.9V13H9.8v4.5h3.8V29z"/></svg></a>
+    <a class="rail-icon" href="https://open.spotify.com/user/31y5sspso3czph4gbbtaupf2ypwu?si=91af036c598d4b63" aria-label="Spotify" target="_blank" rel="noreferrer"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M8 12c5.5-1.5 11-.8 15 1.7M9.2 16c4.4-1.1 9-.6 12.8 1.5M10.3 20c3.5-.8 7.2-.4 10.2 1.2"/></svg></a>
+    <a class="rail-icon instagram" href="https://www.instagram.com/shyred184/?hl=vi" aria-label="Instagram" target="_blank" rel="noreferrer"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="4" width="24" height="24" rx="7"/><circle cx="16" cy="16" r="5.3"/><circle class="filled" cx="23.4" cy="8.9" r="1.5"/></svg></a>
+    <a class="rail-icon x-icon" href="https://x.com/Shyred1804" aria-label="X" target="_blank" rel="noreferrer"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 5h5l15 22h-5L6 5Zm1 22L25 5M7 5l18 22"/></svg></a>
+    <a class="rail-icon discord-icon" href="https://discord.com/" aria-label="Discord" title="Discord" target="_blank" rel="noreferrer"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 8.5c5-2.4 11-2.4 16 0 2.5 3.6 3.7 7.7 3.5 12-3 2.4-5.8 3.6-8.5 4l-1.1-1.8M14.1 22.7 13 24.5c-2.8-.4-5.6-1.6-8.5-4-.2-4.3 1-8.4 3.5-12M11.5 17h.1m8.8 0h.1"/><path d="M11.5 16.5a1 1 0 1 0 0 .1m8.8-.1a1 1 0 1 0 0 .1"/></svg></a>
+    <a class="rail-icon zalo-icon" href="https://zalo.me/" aria-label="Zalo" title="Zalo" target="_blank" rel="noreferrer"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7h22v15H15l-6 4v-4H5z"/><path d="M10 12h5l-5 6h5m2-6h5m-2.5 0v6m4-6v6"/></svg></a>
+    <a class="rail-icon whatsapp-icon" href="https://www.whatsapp.com/" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noreferrer"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26 7.5 21A11 11 0 1 1 12 25l-6 1Z"/><path d="M12 11c.5 4 3.5 7 7.5 8l1.5-2-3-1.5-1.2 1c-1.5-.6-2.6-1.7-3.2-3.2l1-1.2-1.5-3z"/></svg></a>
+  </nav>
+
+  <button class="settings-trigger" id="settingsTrigger" aria-label="Mở cài đặt giao diện" title="Cài đặt"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M13.4 3h5.2l.8 3.2a10 10 0 0 1 2.1 1.2l3.1-1.1 2.6 4.5-2.4 2.2a10 10 0 0 1 0 2.4l2.4 2.2-2.6 4.5-3.1-1.1a10 10 0 0 1-2.1 1.2l-.8 3.2h-5.2l-.8-3.2a10 10 0 0 1-2.1-1.2l-3.1 1.1-2.6-4.5 2.4-2.2a10 10 0 0 1 0-2.4l-2.4-2.2 2.6-4.5 3.1 1.1a10 10 0 0 1 2.1-1.2L13.4 3Z"/><circle cx="16" cy="14" r="3.4"/></svg></button>
+
+  <main class="profile-panel">
+    <section class="date-block" aria-label="Ngày và giờ hiện tại">
+      <h1 id="weekday">SUN DAY</h1>
+      <p class="date-line" id="dateLine"></p>
+      <p class="time-line" id="timeLine"></p>
+    </section>
+
+    <section class="calendar" aria-label="Lịch tháng">
+      <div class="calendar-top"><button id="prevMonth" aria-label="Tháng trước">‹</button><h2 id="monthName">OCTOBER</h2><button id="nextMonth" aria-label="Tháng sau">›</button></div>
+      <div class="calendar-rule"></div>
+      <div class="calendar-grid calendar-weekdays" aria-hidden="true"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+      <div class="calendar-grid" id="calendarDays"></div>
+    </section>
+
+    <section class="profile-stats" aria-label="Thông tin nhanh">
+      <div class="stat-item"><div class="stat-value"><span aria-hidden="true">★</span> 4.6</div><div class="stat-label">rating</div></div>
+      <div class="stat-item"><div class="stat-value">7 days</div><div class="stat-label">duration</div></div>
+      <div class="stat-item"><div class="stat-value">$44/hr</div><div class="stat-label">rate</div></div>
+    </section>
+
+    <img class="character-art" src="Sukuna.png" alt="Nhân vật Sukuna minh họa theo phong cách manga">
+    <div class="view-count" aria-label="Số lượt xem"><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M2 14S8 3 20 3s18 11 18 11-6 11-18 11S2 14 2 14Z"/><circle cx="20" cy="14" r="6"/></svg><span>1804</span></div>
+
+    <section class="profile-side" aria-label="Giới thiệu và bộ sưu tập">
+      <div class="nameplate"><span>SHYRED</span><img src="Avatar.jpg" alt="Ảnh đại diện manga của Shyred"></div>
+      <h2 class="greeting">Hi, I'm Shyred :3</h2>
+      <div class="gallery" id="gallery" aria-label="Bộ sưu tập">
+        <button class="gallery-tile manga-tile" data-image="Manga_Eyes.jpg" aria-label="Mở ảnh manga"><img src="Manga_Eyes.jpg" alt="Bộ sưu tập tranh manga đen trắng"></button>
+        <div class="tile-stack"><button class="gallery-tile" data-image="Lamborghini.jpg" aria-label="Mở ảnh xe"><img src="Lamborghini.jpg" alt="Lamborghini đỗ trên phố ban đêm"></button><button class="gallery-tile" data-image="music.jpg" aria-label="Mở ảnh âm nhạc"><img src="music.jpg" alt="Góc nghe nhạc và playlist cá nhân"></button></div>
+      </div>
+      <div class="music-player" aria-label="Trình phát nhạc">
+        <img class="album-art" src="music-avatar.jpg" alt="Góc nghe nhạc và playlist cá nhân">
+        <div class="player-content"><div class="track-title">TỰ SỰ</div><div class="track-artist">Changg, lotdaynee</div><div class="progress-row"><span class="current-time">0:00</span><input id="trackProgress" type="range" min="0" max="100" value="0" aria-label="Tiến trình bài hát"><span class="duration">0:00</span></div><div class="player-controls"><button id="rewindButton" aria-label="Lùi 10 giây">|◀</button><button class="play-button" id="playButton" aria-label="Phát nhạc">▶</button><button id="forwardButton" aria-label="Tiến 10 giây">▶|</button><button id="repeatButton" class="repeat-button" aria-label="Bật chế độ lặp lại" aria-pressed="false" title="Bật lặp lại">↻</button><label class="volume-control" aria-label="Âm lượng"><span aria-hidden="true">♪</span><input id="volumeControl" type="range" min="0" max="1" step="0.01" value="0.65" aria-label="Âm lượng"></label></div></div>
+      </div>
+      <audio id="profileAudio" preload="metadata" src="Tự%20Sự.mp3" hidden></audio>
+    </section>
+  </main>
+
+  <aside class="settings-panel" id="settingsPanel" aria-label="Cài đặt profile" aria-hidden="true"><button class="settings-close" id="settingsClose" aria-label="Đóng">×</button><p class="settings-kicker">PERSONAL SPACE</p><h2>Góc của bạn</h2><p>Điều chỉnh giao diện và hình ảnh profile.</p>
+    <button class="theme-toggle" id="themeToggle">Chuyển nền tối</button>
+    <label for="themeColorStart">Màu chủ đề</label><div class="color-pair"><input type="color" id="themeColorStart" value="#d9d9d9" aria-label="Màu chủ đề thứ nhất"><input type="color" id="themeColorEnd" value="#777777" aria-label="Màu chủ đề thứ hai"></div>
+    <label class="gradient-option"><input type="checkbox" id="gradientToggle" checked> Dùng chuyển màu gradient</label>
+    <label for="avatarUpload">Đổi avatar</label><input class="file-control" type="file" id="avatarUpload" accept="image/*">
+    <label for="backgroundUpload">Đổi ảnh, GIF hoặc video nền</label><input class="file-control" type="file" id="backgroundUpload" accept="image/*,video/*">
+    <label for="galleryUpload1">Đổi ảnh trưng bày</label><div class="gallery-upload-list"><input class="file-control" type="file" id="galleryUpload1" accept="image/*" aria-label="Ảnh trưng bày 1"><input class="file-control" type="file" id="galleryUpload2" accept="image/*" aria-label="Ảnh trưng bày 2"><input class="file-control" type="file" id="galleryUpload3" accept="image/*" aria-label="Ảnh trưng bày 3"></div>
+  </aside>
+  <div class="search-panel" id="searchPanel" aria-hidden="true"><label for="gallerySearch">Tìm trong bộ sưu tập</label><input id="gallerySearch" type="search" placeholder="Manga, xe, âm nhạc…"><button id="searchClose" aria-label="Đóng tìm kiếm">×</button></div>
+  <div class="image-viewer" id="imageViewer" aria-hidden="true"><button id="viewerClose" aria-label="Đóng ảnh">×</button><img src="" alt="Ảnh phóng to"></div>
+</body>
+</html>
